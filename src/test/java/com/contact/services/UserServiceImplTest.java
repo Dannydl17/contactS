@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 @SpringBootTest
 public class UserServiceImplTest {
     @Autowired
@@ -25,5 +27,7 @@ public class UserServiceImplTest {
         request.setPassword("1234");
 
         UserRegistrationResponse response = userService.register(request);
+        assertNotNull(response);
+        assertNotNull(response.getId());
     }
 }

@@ -1,5 +1,10 @@
 package com.contact.dtos.responses;
 
-public class UserRegistrationResponse {
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+public class UserRegistrationResponse {
+    private Long id;
 }

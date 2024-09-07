@@ -1,5 +1,6 @@
 package com.contact.services;
 
+import com.contact.data.models.User;
 import com.contact.data.repositories.UserRepository;
 import com.contact.dtos.requests.UserRegistrationRequest;
 import com.contact.dtos.responses.UserRegistrationResponse;
@@ -13,7 +14,15 @@ public class AppUserService implements UserService{
 
     @Override
     public UserRegistrationResponse register(UserRegistrationRequest request) {
-        return null;
+        User user = new User();
+        user.setFirstName(request.getFirstName());
+        user.setLastName(request.getLastName());
+        user.setPassword(request.getPassword());
+
+        User savedUser = userRepository.save(user);
+        UserRegistrationResponse response = new UserRegistrationResponse();
+        response.setId(savedUser.getId());
+        return response;
     }
 
     @Override
