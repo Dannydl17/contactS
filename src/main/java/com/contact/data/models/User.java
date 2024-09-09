@@ -17,5 +17,5 @@ public class User {
     private String lastName;
     private String password;
     @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
-    private Contact contact = new Contact();
+    private ContactServer contactServer = new ContactServer();
 }

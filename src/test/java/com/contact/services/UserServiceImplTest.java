@@ -30,4 +30,10 @@ public class UserServiceImplTest {
         assertNotNull(response);
         assertNotNull(response.getId());
     }
+
+    @Test
+    public void testThatUserCanLoginTest(){
+
+
+    }
 }
