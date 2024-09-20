@@ -1,8 +1,6 @@
 package com.contact.data.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,5 +19,8 @@ public class Contact {
     private Long id;
     private String firstName;
     private String lastName;
+    private String email;
     private String phoneNumber;
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private Phonebook phonebook = new Phonebook();
 }

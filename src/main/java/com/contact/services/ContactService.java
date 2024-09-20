@@ -10,6 +10,6 @@ public interface ContactService {
 
     long count();
 
-    Contact updateContact(ContactCreateRequest request, String number);
+//    Contact updateContact(ContactCreateRequest request, String number);
 
 }

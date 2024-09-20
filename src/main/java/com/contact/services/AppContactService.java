@@ -30,15 +30,15 @@ public class AppContactService implements ContactService{
         return contactRepository.count();
     }
 
-    @Override
-    public Contact updateContact(ContactCreateRequest request, String number) {
-        Contact contact = findContact(request.getFirstName(),request.getLastName(),request.getPhoneNumber());
-        contact.setPhoneNumber(contact.getPhoneNumber() + " " + number);
-        Contact savedContact = contactRepository.save(contact);
-        return savedContact;
-    }
+//    @Override
+//    public Contact updateContact(ContactCreateRequest request, String number) {
+////        Contact contact = findContact(request.getFirstName(),request.getLastName(),request.getPhoneNumber());
+//        contact.setPhoneNumber(contact.getPhoneNumber() + " " + number);
+//        Contact savedContact = contactRepository.save(contact);
+//        return savedContact;
+//    }
 
-    private Contact findContact(String firstName, String lastName, String phoneNumber) {
-        return contactRepository.findEntryByFirstNameLastNameAndPhoneNumber(firstName, lastName, phoneNumber);
-    }
+//    private Contact findContact(String firstName, String lastName, String phoneNumber) {
+//        return contactRepository.findEntryByFirstNameLastNameAndPhoneNumber(firstName, lastName, phoneNumber);
+//    }
 }

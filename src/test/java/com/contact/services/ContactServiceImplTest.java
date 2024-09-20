@@ -53,7 +53,7 @@ public class ContactServiceImplTest {
         request.setPhoneNumber("080234523456");
         Contact contact = contactService.createContact(request);
         assertEquals("080234523456", contact.getPhoneNumber());
-        Contact newContact = contactService.updateContact(request, "080453256678");
-        assertEquals("080453256678", newContact.getPhoneNumber());
+//        Contact newContact = contactService.updateContact(request, "080453256678");
+//        assertEquals("080453256678", newContact.getPhoneNumber());
     }
 }

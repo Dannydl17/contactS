@@ -5,6 +5,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class AppContactServerService implements ContactServerService{
+public class AppPhoneBookService implements PhoneBookService {
 
 }

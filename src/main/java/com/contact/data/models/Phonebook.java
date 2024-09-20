@@ -12,11 +12,13 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Setter
 @Getter
 @Entity
-public class ContactServer {
+public class Phonebook {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
+    private String name;
     @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.REMOVE})
     private List<Contact> contacts = new ArrayList<>();
-
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private User user;
 }
